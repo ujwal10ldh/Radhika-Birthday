@@ -741,18 +741,121 @@ footer .fline{opacity:.7;font-style:italic;}
 
 <!-- ================= HERO ================= -->
 <section id="hero">
-  <div class="glow-orb" style="width:280px;height:280px;background:var(--gold);top:-40px;left:-60px;"></div>
+  <div
+    class="glow-orb"
+    style="width:280px;height:280px;background:var(--gold);top:-40px;left:-60px;"
+  ></div>
+
   <div class="hero-frame reveal in-view" id="hero-frame">
     <div class="frame-glow"></div>
-    <img id="hero-img" src="photo2.jpg" alt="Radhika smiling" loading="lazy"
-         onerror="this.closest('.hero-frame').classList.add('ph');this.style.display='none'">
+
+    <img
+      id="hero-img"
+      src="./photo2.jpg?v=20260821"
+      alt="Radhika smiling"
+      loading="eager"
+      fetchpriority="high"
+      decoding="async"
+    >
   </div>
-  <h1 class="hero-title reveal in-view reveal-delay-1">Happy Birthday, Radhika 🥹💗</h1>
-  <div class="hero-date reveal in-view reveal-delay-1">22 August 2026</div>
-  <p class="hero-line reveal in-view reveal-delay-2">Us ladki ke naam… jisne meri normal si life ko itni saari beautiful memories de di.</p>
+
+  <h1 class="hero-title reveal in-view reveal-delay-1">
+    Happy Birthday, Radhika 🥹💗
+  </h1>
+
+  <div class="hero-date reveal in-view reveal-delay-1">
+    22 August 2026
+  </div>
+
+  <p class="hero-line reveal in-view reveal-delay-2">
+    Us ladki ke naam… jisne meri normal si life ko itni saari beautiful memories de di.
+  </p>
+
   <div class="scroll-hint reveal in-view reveal-delay-3">
     <span>Scroll kar… abhi bahut kuch baaki hai. 👀</span>
     <span class="arrow"></span>
+  </div>
+</section>
+
+
+<!-- ================= THREE PHOTOS STORY ================= -->
+<section class="section" id="photos">
+  <div class="wrap">
+
+    <span class="eyebrow reveal">
+      Scrapbook
+    </span>
+
+    <h2 class="title reveal">
+      Sirf 3 Photos Hain… Par Memories Bahut Saari. ❤️
+    </h2>
+
+    <p class="sub reveal reveal-delay-1">
+      Har photo ke peeche ek poori kahani hai.
+    </p>
+
+    <div class="polaroid-stack">
+
+      <!-- PHOTO 01 -->
+      <div class="polaroid reveal" data-idx="1">
+        <span class="tag">01</span>
+        <span class="pin"></span>
+
+        <div class="photo-box">
+          <img
+            src="./photo1.jpg?v=20260821"
+            alt="Radhika — jahan se story shuru hoti hai"
+            loading="lazy"
+            decoding="async"
+          >
+        </div>
+
+        <div class="cap">
+          Yahan se story shuru hoti hai…
+        </div>
+      </div>
+
+
+      <!-- PHOTO 02 -->
+      <div class="polaroid reveal" data-idx="2">
+        <span class="tag">02</span>
+        <span class="pin"></span>
+
+        <div class="photo-box">
+          <img
+            src="./photo2.jpg?v=20260821"
+            alt="Radhika — jab hum close hote gaye"
+            loading="lazy"
+            decoding="async"
+          >
+        </div>
+
+        <div class="cap">
+          Aur phir pata hi nahi chala hum itne close kab ho gaye.
+        </div>
+      </div>
+
+
+      <!-- PHOTO 03 -->
+      <div class="polaroid reveal" data-idx="3">
+        <span class="tag">03</span>
+        <span class="pin"></span>
+
+        <div class="photo-box">
+          <img
+            src="./photo3.jpg?v=20260821"
+            alt="Radhika — ek memory jo hamesha rakhungi"
+            loading="lazy"
+            decoding="async"
+          >
+        </div>
+
+        <div class="cap">
+          Aur ye… bas ek photo nahi hai. Ye ek memory hai jo main hamesha rakhungi. 🥹
+        </div>
+      </div>
+
+    </div>
   </div>
 </section>
 
@@ -1024,8 +1127,12 @@ footer .fline{opacity:.7;font-style:italic;}
      photo3 -> promise background + third scrapbook card + final section
      ====================================================== */
   const CONFIG = {
-    photos: { photo1: "photo1.jpg", photo2: "photo2.jpg", photo3: "photo3.jpg" }
-  };
+  photos: {
+    photo1: "./photo1.jpg?v=20260821",
+    photo2: "./photo2.jpg?v=20260821",
+    photo3: "./photo3.jpg?v=20260821"
+  }
+};
 
   const introBg = document.getElementById('intro-bg-img');
   const promiseBg = document.getElementById('promise-bg-img');
